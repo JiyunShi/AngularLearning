@@ -22,7 +22,7 @@ export class AppComponent{
 	};
 
 
-	onMediaItemDelet(mediaITem){
+	onMediaItemDelete(mediaITem){
 		
 	}
 
