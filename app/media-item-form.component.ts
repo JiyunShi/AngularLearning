@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import {Validators，FormBuilder} from '@angular/forms';
+import { Validators, FormBuilder} from '@angular/forms';
 import { MediaItemService} from './media-item.service';
 import {lookupListToken} from './providers';
 
@@ -15,7 +15,6 @@ export class MediaItemFormComponent {
 	constructor(private formBuilder: FormBuilder, 
 		private mediaItemService: MediaItemService,
 		@Inject(lookupListToken) public lookupLists){
-
 	}
 
 
@@ -57,7 +56,8 @@ export class MediaItemFormComponent {
 
 	onSubmit(mediaItem){
 		console.log(mediaItem);
-		this.mediaItemService.add(mediaItem);
+		this.mediaItemService.add(mediaItem)
+		.subscribe();
 	}
 
 
