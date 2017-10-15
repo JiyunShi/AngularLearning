@@ -1,10 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-//import {FormsModule} from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms'
-
 import {HttpModule, XHRBackend} from '@angular/http';
-
 
 import {AppComponent} from './app.component';
 import {MediaItemComponent} from './media-item.component';
@@ -14,9 +11,9 @@ import {CategoryListPipe} from './category-list.pipe';
 import {MediaItemFormComponent} from './media-item-form.component';
 import {MediaItemService} from './media-item.service';
 import {lookupListToken, lookupLists} from './providers';
-
 import {MockXHRBackend} from './mock-xhr-backend';
 
+import {routing} from './app.routing';
 
 
 
@@ -24,9 +21,9 @@ import {MockXHRBackend} from './mock-xhr-backend';
 		
 	imports: [
 		BrowserModule,
-		//FormsModule
 		ReactiveFormsModule,
-		HttpModule
+		HttpModule,
+		routing
 
 	],
 	declarations: [
